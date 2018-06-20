@@ -1,0 +1,10 @@
+name: CloudSystem
+version: 1.0
+author: LegendryDileo
+api: 3.0.0-ALPHA12
+main: LD\CloudSystem\CloudSystem
+description: CloudSystem
+commands:
+  cloud:
+    description: CloudSystem
+    aliases: [cloudsystem, system, c, cl]
