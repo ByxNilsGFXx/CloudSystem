@@ -1,6 +1,6 @@
 <?php
  
-namespace VL\CloudSystem;
+namespace LD\CloudSystem;
 
 class MinecraftQuery{
 	
