@@ -136,8 +136,8 @@ class CloudSystemListener implements Listener {
                     $mplayers = $info['MaxPlayers'];
                     $tile->setText(
                         $this->plugin->name,
-                        '§7[§aJoin§7]',
-                        '§e' . $playercount . " §7/ §e" . $mplayers,
+                        '§7[§aBetreten§7]',
+                        '§c' . $playercount . " §7/ §c" . $mplayers,
                         '§7ooO'
                     );
 
@@ -157,7 +157,7 @@ class CloudSystemListener implements Listener {
                     $player->sendMessage($this->plugin->prefix . "§f Sign registered successfully!");
 
                 } else {
-                    $player->sendMessage($this->plugin->prefix . '§f Server is offline!');
+                    $player->sendMessage($this->plugin->prefix . '§f Server ist offline!');
                     $this->plugin->player = "";
                 }
             }
@@ -175,10 +175,10 @@ class CloudSystemListener implements Listener {
                 $ip = $data['ip'];
                 $port = $data['port'];
 
-                if($tile->getLine(1) === '§7[§aJoin§7]'){
+                if($tile->getLine(1) === '§7[§aBetreten§7]'){
                     $player->transfer($ip, $port);
                 }else{
-                    $player->sendMessage($this->plugin->prefix.'§f Server is full or offline!');
+                    $player->sendMessage($this->plugin->prefix.'§f Server ist voll oder Offline!');
                 }
             }
         }

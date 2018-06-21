@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
 class CloudSystem extends PluginBase {
-    public $prefix = '§r[§aCloud]';
+    public $prefix = '§r[§aCloud§r]';
     public $cfg;
 
     public $threecount = 1;
@@ -30,7 +30,7 @@ class CloudSystem extends PluginBase {
 
         $this->cfg = new Config($this->getDataFolder() . 'config.yml', Config::YAML);
 
-        $this->getScheduler()->scheduleRepeatingTask(new CloudSystemTask($this), $this->cfg->get('refresh') * 20);
+        $this->getScheduler()->scheduleRepeatingTask(new CloudSystemTask($this), $this->cfg->get('refresh') * 10);
 
         $this->listener = new CloudSystemListener($this);
 
